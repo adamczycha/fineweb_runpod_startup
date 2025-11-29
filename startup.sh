@@ -13,6 +13,6 @@ cp -a $MODEL_CHECKPOINT .
 python -m pip install -r requirements.txt
 
 python classify.py
-if [-n "$RUNPOD_POD_ID"]; then 
+if [ -n "$RUNPOD_POD_ID" ]; then 
     runpodctl remove pod $RUNPOD_POD_ID
 fi
